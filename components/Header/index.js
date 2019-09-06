@@ -17,28 +17,36 @@
 
 function Header(headerSettings) {
 
-const {date, heading, temp} = headerSettings;
+    const {
+        date,
+        heading,
+        temp
+    } = headerSettings;
 
-const header = document.createElement('div');
-header.classList.add('header');
+    const header = document.createElement('div');
+    header.classList.add('header');
 
-const headerDate = document.createElement('span');
-headerDate.classList.add('date');
-headerDate.textContent = date;
+    const headerDate = document.createElement('span');
+    headerDate.classList.add('date');
+    headerDate.textContent = date;
 
-const headerH1 = document.createElement('h1');
-headerH1.textContent = heading;
+    const headerH1 = document.createElement('h1');
+    headerH1.textContent = heading;
 
-const headerTemp = document.createElement('span');
-headerTemp.classList.add('temp');
-headerTemp.textContent  = temp;
+    const headerTemp = document.createElement('span');
+    headerTemp.classList.add('temp');
+    headerTemp.textContent = temp;
 
-header.append(headerDate, headerH1, headerTemp);
+    header.append(headerDate, headerH1, headerTemp);
 
-return header;
+    return header;
 
 }
 
 const headerContainer = document.querySelector('.header-container');
-const newHeader = {date:'Friday September 6', heading:'Lambda Times', temp:'98°'};
+const newHeader = {
+    date: 'Friday September 6',
+    heading: 'Lambda Times',
+    temp: '98°'
+};
 headerContainer.appendChild(Header(newHeader));
