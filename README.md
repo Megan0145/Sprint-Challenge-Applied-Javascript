@@ -30,13 +30,32 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+When a webpage is first loaded, the browser interprets the HTML document and builds a tree model representation of the file, each element being a tree node. This is known as the Document Object Model. It allows us to interact with the elements on the page, for example accesing specific tree nodes/ elements to change their background colour, add event listeners etc 
+
 2. What is an event?
+
+Every time a user interacts with the DOM, it's known as an event. For example, clicking on the page, pressing a keydown, scrolling...
 
 3. What is an event listener?
 
+Event listeners can be applied to specific elements throughout the DOM to trigger a change somewhere on the webpage.
+You could apply a click event listener on a button to change the font color of another specified div 
+
 4. Why would we convert a NodeList into an Array?
 
+You can't use array methods on a NodeList. For example, you may want to use forEach to iterate over each item in the node list and do something with the data. You can do this by running 
+
+const myArray = Array.from(myNodeList);
+
+Now you can iterate over each item in the node list and do something with the data:
+
+myArray.forEach(item => {
+    console.log(item);
+});
+
 5. What is a component?
+
+A combination of HTML, CSS and JS to create 'blocks' for reuse throughout a site. Makes code more DRY.
 
 ### Git Set up
 
