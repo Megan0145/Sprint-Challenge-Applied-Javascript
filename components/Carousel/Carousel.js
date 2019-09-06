@@ -18,6 +18,8 @@
   </div>
 */
 
+const carouselContainer = document.querySelector('.carousel-container');
+
 function carouselCreator(){
 
 const carousel= document.createElement('div');
@@ -29,6 +31,7 @@ leftButton.classList.add('left-button');
 const images = ["./assets/carousel/mountains.jpeg", "./assets/carousel/computer.jpeg", "./assets/carousel/trees.jpeg","./assets/carousel/turntable.jpeg"];
 const image1 = document.createElement('img');
 image1.setAttribute('src', images[0]);
+image1.style.display = 'block';
 
 const image2 = document.createElement('img');
 image2.setAttribute('src', images[1]);
@@ -43,9 +46,10 @@ const rightButton = document.createElement('div');
 rightButton.classList.add('right-button');
 
 carousel.append(leftButton, image1, image2, image3, image4, rightButton);
-const carouselContainer = document.querySelector('.carousel-container');
+
 return carouselContainer.appendChild(carousel);
 
 }
 
 
+carouselCreator();
